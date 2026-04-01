@@ -77,9 +77,6 @@ config.sample.php → config.php
 Add your database credentials inside the file
 3. Run the Project
 
-Open in browser:
-
-http://localhost/Washly
 👨‍💻 Developer
 
 Mohammad Mraizeeq
