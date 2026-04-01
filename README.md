@@ -19,7 +19,7 @@ Instantly review incoming bookings
 Accept or reject requests in real time
 Manage service flow efficiently
 🔹 Dynamic Service Management
-Add, edit, or remove services بسهولة
+Add, edit, or remove services 
 Control pricing and availability
 Support for Basic vs Premium packages
 🔹 Integrated Support System
