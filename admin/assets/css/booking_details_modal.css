@@ -1,0 +1,57 @@
+/* Custom Styles for Booking Details Modal */
+
+.modal-content {
+    border-radius: 12px;
+    box-shadow: 0 8px 30px var(--shadow-medium);
+    border: none;
+    background-color: var(--card-bg);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.modal-title {
+    font-weight: 600;
+    color: var(--primary-text);
+}
+
+.info-card {
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.info-card-title {
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.info-card-title i {
+    color: var(--primary-text);
+    margin-right: 0.5rem;
+}
+
+.info-list li {
+    font-size: 0.95rem;
+    color: var(--primary-text);
+    margin-bottom: 0.5rem;
+}
+
+.info-list li strong {
+    color: var(--secondary-text);
+    font-weight: 500;
+}
+
+.price-details-row span {
+    color: var(--primary-text);
+}
+
+.price-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+}

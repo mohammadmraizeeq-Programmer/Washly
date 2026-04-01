@@ -1,0 +1,230 @@
+:root {
+    --card-gradient-1: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    --card-gradient-2: linear-gradient(135deg, #00b894, #55efc4);
+    --card-gradient-3: linear-gradient(135deg, #e17055, #fab1a0);
+    --card-gradient-4: linear-gradient(135deg, #fd79a8, #fdcb6e);
+    --card-gradient-recent: linear-gradient(135deg, #dfe6e9, #b2bec3);
+    --primary-color: #6c5ce7;
+    --card-text-color: #fff;
+    --card-text-color-dark: #2d3436;
+    --card-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    --card-shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+.fleet-section {
+    padding-bottom: 5rem;
+}
+
+.container h3,
+.container p {
+    color: #212529;
+}
+
+/* Updated Tab Styles */
+.filter-buttons-container {
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    display: inline-flex;
+    gap: 20px;
+}
+
+.filter-btn {
+    border: none;
+    background-color: transparent;
+    color: #6c757d;
+    font-weight: 500;
+    padding: 10px 0;
+    border-radius: 0;
+    position: relative;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.filter-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease-in-out;
+}
+
+.filter-btn:hover {
+    color: var(--primary-color);
+}
+
+.filter-btn.active {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.filter-btn.active::after {
+    width: 100%;
+}
+
+.dash-card {
+    border-radius: 20px;
+    padding: 30px 20px;
+    transition: transform 0.4s, box-shadow 0.4s;
+    color: var(--card-text-color);
+    font-family: 'Poppins', sans-serif;
+    box-shadow: var(--card-shadow);
+}
+
+.dash-card i {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.dash-card h5 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.dash-card p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.dash-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+/* Card gradients */
+.card-1 {
+    background: var(--card-gradient-1);
+}
+
+.card-2 {
+    background: var(--card-gradient-2);
+    color: var(--card-text-color-dark);
+}
+
+.card-3 {
+    background: var(--card-gradient-3);
+    color: var(--card-text-color-dark);
+}
+
+.card-4 {
+    background: var(--card-gradient-4);
+}
+
+/* New Modern Style for Recent Bookings Card */
+.card-recent-bookings {
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card-recent-bookings .card-title {
+    color: #212529;
+    font-size: 1.75rem;
+}
+
+.booking-item {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.booking-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.booking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.booking-service-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.booking-price {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #00b894;
+}
+
+.booking-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+.booking-meta-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.booking-meta-item i {
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+    color: #adb5bd;
+}
+
+.booking-actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-end;
+}
+
+.btn-action {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-action.accept {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-action.accept:hover {
+    background-color: #218838;
+}
+
+.btn-action.reject {
+    background-color: #f4f4f4;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+}
+
+.btn-action.reject:hover {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* Better Alert Message Position */
+.alert-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px;
+    z-index: 1050;
+}

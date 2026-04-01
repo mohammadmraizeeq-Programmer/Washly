@@ -1,0 +1,99 @@
+/*==================================
+  User Management & Forms Styles
+==================================*/
+
+/* --- User Table --- */
+.user-table-card {
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden; /* Ensures the table's rounded corners are respected */
+}
+
+.table-users {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+.table-users thead {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: 600;
+}
+
+.table-users th, 
+.table-users td {
+    padding: 1.25rem 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.table-users tbody tr:hover {
+    background-color: var(--primary-color-light);
+    cursor: pointer;
+}
+
+/* Style for action buttons in the table */
+.user-actions {
+    white-space: nowrap;
+}
+
+.user-actions .btn {
+    margin-right: 0.5rem;
+}
+
+/* --- User Form (Add/Edit) --- */
+.user-form-card {
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    padding: 2rem;
+}
+
+.user-form-card h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem var(--primary-color-light);
+}
+
+/* Custom styles for select and other specific elements if needed */
+.form-select {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem var(--primary-color-light);
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 768px) {
+    .table-users th, 
+    .table-users td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.9rem;
+    }
+}

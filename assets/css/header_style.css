@@ -1,0 +1,43 @@
+:root {
+    --light-gray: #f2f2f2;
+    --dark-gray: #333;
+    --nav-link-hover-color: #306ca8; /* Dark blue/navy for hover */
+}
+
+body {
+    background-color: var(--light-gray);
+}
+
+header {
+    background: var(--light-gray);
+    padding: 15px 0;
+}
+
+/* Style for the hamburger menu icon */
+.navbar-toggler-icon {
+    /* If you want a specific color for the bars inside the button */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2851, 51, 51, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Style and hover effect for the brand/logo link */
+.navbar-brand {
+    color: var(--dark-gray) !important; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: var(--nav-link-hover-color) !important;
+}
+
+/* Style for the navigation links */
+.navbar-nav .nav-link {
+    color: var(--dark-gray);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Change color when hovering over a regular nav link */
+.navbar-nav .nav-link:hover {
+    color: var(--nav-link-hover-color);
+}

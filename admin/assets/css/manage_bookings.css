@@ -1,0 +1,105 @@
+/* Custom Styles for Manage Bookings */
+
+:root {
+    /* Main Color Palette */
+    --primary-blue: #0d6efd;
+    --primary-blue-gradient-start: #0d6efd;
+    --primary-blue-gradient-end: #290ec4;
+    --primary-text: #212529;
+    --secondary-text: #6c757d;
+    --light-bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --border-color: #dee2e6;
+    
+    /* Status Colors based on images */
+    --pending-color: #ffc107;
+    --pending-text: #856404;
+    --confirmed-color: #198754;
+    --confirmed-text: #155724;
+    --in-progress-color: #0dcaf0;
+    --in-progress-text: #0c5460;
+    --completed-color: #0dcaf0;
+    --completed-text: #004085;
+    --cancelled-color: #dc3545;
+    --cancelled-text: #721c24;
+
+    /* Shadow and Hover Effects */
+    --shadow-light: rgba(0, 0, 0, 0.05);
+    --shadow-medium: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background-color: var(--light-bg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+h2 {
+    font-weight: 600;
+    color: var(--primary-text);
+}
+
+.page-header p {
+    color: var(--secondary-text);
+    font-size: 0.95rem;
+}
+
+/* Updated 'Add Booking' button with gradient */
+.add-booking-btn {
+    font-weight: 500;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    background: linear-gradient(to right, var(--primary-blue-gradient-start), var(--primary-blue-gradient-end));
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.add-booking-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.search-filter-row {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.search-container {
+    position: relative;
+    flex-grow: 1;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    color: var(--secondary-text);
+}
+
+.search-input {
+    padding-left: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: none;
+    transition: border-color 0.2s;
+}
+
+.search-input:focus {
+    border-color: var(--primary-blue);
+}
+
+.filter-dropdown {
+    width: 200px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: none;
+    background-color: var(--card-bg);
+    transition: border-color 0.2s;
+}
+
+.filter-dropdown:focus {
+    border-color: var(--primary-blue);
+}

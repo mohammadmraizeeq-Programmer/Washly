@@ -1,0 +1,216 @@
+/*
+    ======================================
+    Registration & Login Form Styling
+    =====================================
+*/
+
+/* Define root CSS variables for the color palette */
+:root {
+    --primary-color: #3498db;          /* A vibrant blue for primary actions */
+    --secondary-color: #2ecc71;        /* A fresh green for secondary actions */
+    --background-color: #eef2f5;       /* Main page background */
+    --form-bg-color: rgba(255, 255, 255, 0.95); /* Semi-transparent form container */
+    --form-box-shadow: rgba(0, 0, 0, 0.1);
+    --text-dark: #2c3e50;              /* Dark text for headings */
+    --text-medium: #7f8c8d;            /* Medium gray for paragraphs */
+    --text-input: #34495e;             /* Text color for inputs */
+    --input-bg-color: #f8f9fa;         /* Subtle input background */
+    --border-color: #e1e4e8;           /* Light border for inputs */
+    --icon-color: #bdc3c7;             /* Lighter color for icons */
+    --error-bg-color: #fdeded;
+    --error-text-color: #c0392b;
+    --success-bg-color: #e8f9f2;
+    --success-text-color: #27ae60;
+}
+
+/* Body and container styling */
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Changed from height: 100% to ensure it always fills the viewport and grows with content */
+    overflow-y: auto;
+}
+
+body {
+    background: url('/Training/Washly/assets/images/pic5.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    /* Removed overflow: hidden; as it was preventing scrolling */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Changed height to 100% to take on the height of the parent (body), which now has min-height: 100vh */
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    z-index: -1;
+}
+
+/* New wrapper for centering the form */
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.form-container {
+    background-color: var(--form-bg-color);
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--form-box-shadow);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.form-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px var(--form-box-shadow);
+}
+
+/* Header and logo */
+.form-header {
+    margin-bottom: 40px;
+}
+
+.form-header img {
+    width: 90px;
+    margin-bottom: 15px;
+}
+
+.form-header h2 {
+    font-size: 2.2rem;
+    color: var(--text-dark);
+    font-weight: 700;
+    margin: 0;
+}
+
+.form-header h2+p {
+    color: var(--text-medium);
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+/* Form styling */
+.form-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+/* Input styling */
+.form-control {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-input);
+    background-color: var(--input-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    background-color: #fff;
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* Button styling */
+.btn-primary-custom {
+    color: #fff;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+}
+
+.link-text {
+    margin-top: 25px;
+    color: var(--text-medium);
+    font-size: 0.95rem;
+}
+
+.link-text a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.link-text a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Icon styling */
+.input-icon {
+    position: relative;
+}
+
+.input-icon .form-control {
+    padding-left: 50px;
+}
+
+.input-icon i {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: var(--icon-color);
+    font-size: 1.1rem;
+}
+
+/* Message styling */
+.error-message,
+.success-message {
+    font-size: 0.9em;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.error-message {
+    background-color: var(--error-bg-color);
+    color: var(--error-text-color);
+    border: 1px solid var(--error-text-color);
+}
+
+.success-message {
+    background-color: var(--success-bg-color);
+    color: var(--success-text-color);
+    border: 1px solid var(--success-text-color);
+}
+
+.error-message p,
+.success-message p {
+    margin: 0;
+    padding-left: 10px;
+}

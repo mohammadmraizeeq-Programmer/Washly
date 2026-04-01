@@ -1,0 +1,13 @@
+# --- Security: Protect Credentials ---
+includes/config.php
+.env
+
+# --- OS/IDE Metadata ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Logs & Temp ---
+*.log
+npm-debug.log*

@@ -1,0 +1,47 @@
+:root {
+    --primary-color: #0077b6;
+    --secondary-color: #00b4d8;
+    --text-color: #fff;
+    --hover-bg: rgba(255, 255, 255, 0.2);
+    --active-bg: #fff;
+    --active-text: #0077b6;
+}
+
+nav.navbar {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    padding: 12px 20px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 22px;
+    color: var(--text-color) !important;
+}
+
+.nav-link {
+    color: var(--text-color) !important;
+    margin: 0 8px;
+    border-radius: 8px;
+    padding: 8px 15px !important;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    background: var(--hover-bg);
+}
+
+.nav-link.active {
+    background: var(--active-bg) !important;
+    color: var(--active-text) !important;
+    font-weight: bold;
+}
+
+/* Optional: smoother toggle button */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}

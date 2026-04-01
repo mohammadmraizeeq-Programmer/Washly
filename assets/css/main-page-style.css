@@ -1,0 +1,580 @@
+:root {
+    /* New Color Palette based on provided Header CSS */
+    --primary-color: #306ca8; /* Deep Blue from Nav Link Hover */
+    --primary-dark: #255db1;
+    --secondary-color: #3B71CA; /* Vibrant Blue for Buttons */
+    --secondary-dark: #2F599E;
+    --accent-color: #f2f2f2; /* Light Grey from Header Background */
+    --text-dark: #333333; /* Dark Grey from Nav Links */
+    --text-light: #666666;
+    --white: #ffffff;
+    --shadow-light: rgba(0, 0, 0, 0.05);
+    --shadow-medium: rgba(0, 0, 0, 0.1);
+}
+
+/* Base Styles & Typography */
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--accent-color);
+}
+
+.container {
+    max-width: 1200px;
+}
+
+/* Shared Heading Styles */
+.section-header {
+    margin-bottom: 3.5rem;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+/* Buttons */
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 2px solid var(--primary-color);
+}
+
+.primary-btn:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px var(--shadow-medium);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.secondary-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px var(--shadow-medium);
+}
+
+/* ================================================= */
+/* --- Hero Section ---*/
+/* ================================================= */
+
+.hero-section {
+    padding: 100px 0;
+}
+
+.hero-section h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+.hero-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.hero-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ================================================= */
+/* --- Content Image Section ---*/
+/* ================================================= */
+
+.content-image {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    background-image: url('../images/pic2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    margin: 40px 0;
+}
+
+
+/* ================================================= */
+/* --- Perks Section ---*/
+/* ================================================= */
+
+.perks-section {
+    padding: 80px 0;
+}
+
+.perk-card {
+    background-color: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--shadow-light);
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.perk-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px var(--shadow-medium);
+}
+
+.perk-image-container {
+    padding: 20px;
+}
+
+.perk-image-container img {
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.perk-content-container {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.perk-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.perk-description {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.perk-buttons .btn {
+    border-radius: 5px;
+}
+
+.perk-primary-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+}
+
+.perk-secondary-btn {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.perk-primary-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.perk-secondary-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+
+/* ================================================= */
+/* --- Why Choose Us Section ---*/
+/* ================================================= */
+
+.feature-card {
+    background-color: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-medium);
+}
+
+.icon-circle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    margin-bottom: 2rem;
+    transition: background-color 0.3s;
+}
+
+.feature-card:hover .icon-circle {
+    background-color: var(--primary-dark);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--white);
+}
+
+.feature-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--text-dark);
+}
+
+
+/* ================================================= */
+/* --- Booking Process Section ---*/
+/* ================================================= */
+
+.process-container {
+    position: relative;
+    padding-top: 2rem;
+}
+
+.process-step {
+    padding: 2rem 1rem;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px var(--shadow-light);
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-medium);
+}
+
+.step-icon-circle {
+    display: inline-block;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.step-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--text-dark);
+}
+
+
+/* ================================================= */
+/* --- Services Section (Pricing Cards) ---*/
+/* ================================================= */
+
+.pricing-plans {
+    margin-top: 3rem;
+}
+
+.pricing-card {
+    background-color: var(--white);
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 0 4px 20px var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px var(--shadow-medium);
+}
+
+.pricing-card .card-header {
+    background-color: transparent;
+    border-bottom: none;
+    padding-bottom: 1rem;
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.service-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.service-price {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.service-features {
+    text-align: left;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.service-features li {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+}
+
+.service-features li i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+.service-meta {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+/* Highlighted Card (e.g., Premium Wash) */
+.highlighted-card {
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.highlighted-card .service-price {
+    color: var(--primary-color);
+}
+
+
+/* ================================================= */
+/* --- Testimonials Section ---*/
+/* ================================================= */
+
+.testimonial-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px var(--shadow-light);
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-card .author {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(30%);
+}
+
+
+/* ================================================= */
+/* --- FAQ Section ---*/
+/* ================================================= */
+
+.accordion-item {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 15px var(--shadow-light);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.accordion-item:hover {
+    transform: translateY(-5px);
+}
+
+.accordion-button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    background-color: var(--white);
+    border-radius: 10px;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--primary-color);
+    background-color: var(--white);
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: var(--primary-color);
+}
+
+.accordion-body {
+    background-color: var(--white);
+    color: var(--text-light);
+    padding: 1rem 1.25rem;
+}
+
+/* ================================================= */
+/* --- Contact Section ---*/
+/* ================================================= */
+
+.contact-form-container {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px var(--shadow-light);
+}
+
+.contact-form-container .form-label {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.contact-form-container .form-control {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    padding: 10px 15px;
+}
+
+.map-container {
+    box-shadow: 0 4px 20px var(--shadow-light);
+}
+
+
+/* ================================================= */
+/* --- Call-to-Action Section ---*/
+/* ================================================= */
+
+.cta-section {
+    background-image: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: var(--white);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px var(--shadow-medium);
+}
+
+.cta-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.cta-subtitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.cta-btn {
+    background-color: var(--white);
+    color: var(--primary-color);
+    font-weight: 600;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #e2e8f0;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ================================================= */
+/* --- Footer ---*/
+/* ================================================= */
+
+.main-footer {
+    background-color: var(--primary-color);
+    color: #ced4da;
+    font-family: 'Lato', sans-serif;
+}
+
+.footer-logo {
+    max-width: 150px;
+    height: auto;
+    filter: invert(1);
+}
+
+.footer-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+.footer-link,
+.social-link {
+    color: #a0a0a0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-link:hover,
+.social-link:hover {
+    color: var(--white);
+}
+
+.social-link i {
+    margin-right: 0.5rem;
+}
+
+.footer-divider {
+    border-color: #444;
+}
+
+.copyright-text {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .perk-card .row {
+        flex-direction: column;
+    }
+    .perk-image-container, .perk-content-container {
+        padding: 30px;
+        text-align: center;
+    }
+    .perk-buttons {
+        justify-content: center;
+    }
+}

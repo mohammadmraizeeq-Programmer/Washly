@@ -1,0 +1,94 @@
+:root{
+    --bg: #f7fbff;
+    --card: #ffffff;
+    --primary: #0ea5e9;
+    --muted: #718096;
+    --me-bg: linear-gradient(135deg,#06b6d4,#0ea5e9);
+    --other-bg: #ffffff;
+}
+
+*{box-sizing:border-box}
+body,html{height:100%;margin:0;font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif;background:var(--bg)}
+.user-chat{
+    width:100%;
+    max-width:820px;
+    height:85vh;
+    margin:28px auto;
+    background:var(--card);
+    border-radius:14px;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+}
+
+/* header */
+.user-chat-header{ background: transparent; border-bottom:1px solid rgba(2,6,23,0.04) }
+
+/* body */
+.user-chat-body{
+    flex:1;
+    overflow:auto;
+    padding:22px;
+    background-image: linear-gradient(180deg, rgba(14,165,233,0.03) 0%, transparent 40%);
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+/* welcome */
+.welcome-tip{ background:linear-gradient(90deg, rgba(14,165,233,0.06), rgba(99,102,241,0.02)); border-radius:12px }
+
+/* messages */
+.message-row{ display:flex; width:100%; }
+.message-row.me{ justify-content:flex-end; }
+.message-row.other{ justify-content:flex-start; }
+
+.message{
+    max-width:72%;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+
+.msg-me{
+    background:var(--me-bg);
+    color:#fff;
+    padding:12px 16px;
+    border-radius:18px 18px 6px 18px;
+    box-shadow: 0 10px 24px rgba(14,165,233,0.08);
+}
+.msg-other{
+    background:var(--other-bg);
+    color:#111827;
+    padding:12px 16px;
+    border-radius:18px 18px 18px 6px;
+    border:1px solid rgba(2,6,23,0.06);
+}
+
+/* sender name / content / time */
+.sender-name{ font-size:0.82rem; font-weight:600; color:var(--muted) }
+.msg-content{ font-size:0.95rem; line-height:1.4; white-space:pre-wrap }
+.msg-time{ font-size:0.72rem; color:var(--muted); align-self:flex-end }
+
+/* composer */
+.user-chat-composer{
+    background:transparent;
+    border-top:1px solid rgba(2,6,23,0.04);
+}
+.user-chat-composer .btn-gradient{
+    background: linear-gradient(90deg,#06b6d4,#0ea5e9);
+    color:#fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius:10px;
+    display:flex; gap:8px; align-items:center;
+}
+.user-chat-composer .btn-light{ border-radius:10px; width:44px; height:44px; display:flex; align-items:center; justify-content:center }
+
+/* responsive */
+@media (max-width:700px){
+    .admin-chat-wrap{ padding:10px; flex-direction:column }
+    .sidebar{ width:100%; order:2 }
+    .chat-main{ order:1 }
+    .user-chat{ height:88vh; margin:12px }
+}

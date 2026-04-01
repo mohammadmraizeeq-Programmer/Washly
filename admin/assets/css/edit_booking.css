@@ -1,0 +1,142 @@
+/* Custom Styles for Edit/Add Booking Page */
+:root {
+    /* Main Color Palette (reused from manage_bookings.css for consistency) */
+    --primary-blue: #0d6efd;
+    --primary-blue-gradient-start: #0d6efd;
+    --primary-blue-gradient-end: #290ec4;
+    --primary-text: #212529;
+    --secondary-text: #6c757d;
+    --light-bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --border-color: #dee2e6;
+    
+    /* Status Colors */
+    --pending-color: #ffc107;
+    --pending-text: #856404;
+    --confirmed-color: #198754;
+    --confirmed-text: #155724;
+    --in-progress-color: #0dcaf0;
+    --in-progress-text: #0c5460;
+    --completed-color: #0dcaf0;
+    --completed-text: #004085;
+    --cancelled-color: #dc3545;
+    --cancelled-text: #721c24;
+
+    /* Shadow and Hover Effects */
+    --shadow-light: rgba(0, 0, 0, 0.05);
+    --shadow-medium: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background-color: var(--light-bg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.form-header {
+    margin-bottom: 2rem;
+}
+
+.page-title {
+    font-weight: 700;
+    color: var(--primary-text);
+}
+
+.status-badge {
+    padding: 0.35em 0.8em;
+    font-size: 0.75em;
+    font-weight: 600;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.375rem;
+}
+
+/* Status-specific badge colors (reused) */
+.pending { background-color: var(--pending-color); color: var(--pending-text); }
+.confirmed { background-color: var(--confirmed-color); color: var(--confirmed-text); }
+.in-progress { background-color: var(--in-progress-color); color: var(--in-progress-text); }
+.completed { background-color: var(--completed-color); color: var(--completed-text); }
+.cancelled { background-color: var(--cancelled-color); color: var(--cancelled-text); }
+
+/* Main form container styling */
+.booking-form-card {
+    background-color: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px var(--shadow-light);
+    transition: transform 0.3s ease-in-out;
+}
+
+.booking-form-card:hover {
+    transform: translateY(-2px);
+}
+
+.form-section-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Style for form inputs */
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    box-shadow: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Style for checkboxes */
+.form-check-label {
+    font-size: 0.95rem;
+    color: var(--primary-text);
+    margin-right: 1.5rem;
+}
+
+/* Total price section */
+.total-price-section {
+    border-top: 2px solid var(--border-color);
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+}
+
+.total-price-section h5 {
+    font-weight: 600;
+}
+
+.total-price-section #totalPrice {
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+/* Button styles */
+.btn-success {
+    background: linear-gradient(to right, #198754, #0f5132);
+    border: none;
+    font-weight: 500;
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(25, 135, 84, 0.4);
+    background-color: #155724;
+}
+
+.btn-secondary {
+    border-radius: 8px;
+    font-weight: 500;
+}

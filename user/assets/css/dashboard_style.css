@@ -1,0 +1,62 @@
+:root {
+    --card-gradient-1: linear-gradient(135deg, #8990df, #2575fc);
+    --card-gradient-2: linear-gradient(135deg, #43e97b, #38f9d7);
+    --card-gradient-3: linear-gradient(135deg, #f7971e, #ffd200);
+    --card-gradient-4: linear-gradient(135deg, #ff4e50, #f9d423);
+    --card-gradient-recent: linear-gradient(135deg, #cac8cd, #6b9aea);
+    --card-text-color: #fff;
+    --card-text-color-dark: #000;
+    --card-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.dash-card {
+    border-radius: 20px;
+    padding: 30px 20px;
+    transition: transform 0.4s, box-shadow 0.4s;
+    color: var(--card-text-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.dash-card i {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.dash-card h5 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.dash-card p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.dash-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--card-shadow);
+}
+
+/* Card gradients */
+.card-1 { background: var(--card-gradient-1); }
+.card-2 { background: var(--card-gradient-2); color: var(--card-text-color-dark); }
+.card-3 { background: var(--card-gradient-3); color: var(--card-text-color-dark); }
+.card-4 { background: var(--card-gradient-4); }
+.card-recent-bookings { background: var(--card-gradient-recent); }
+
+.list-group-item {
+    border: none;
+    background: transparent;
+    padding: 12px 0;
+}
+
+.text-center h2 {
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.text-center p {
+    font-size: 1.2rem;
+    color: #666;
+}
